@@ -5,6 +5,7 @@ const cors = require("cors");
 require("dotenv").config(); // Load environment variables
 
 const spotifyAuthRoutes = require("./routes/auth"); // Correct import path for Spotify routes
+const searchRoutes = require("./routes/search"); // Import search route
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -30,6 +31,7 @@ app.use(cookieParser()); // Parse cookies
 
 // Routes
 app.use("/auth", spotifyAuthRoutes);
+app.use("/search", searchRoutes);
 
 // Sample route
 app.get("/", (req, res) => {
