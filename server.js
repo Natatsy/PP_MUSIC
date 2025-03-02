@@ -8,7 +8,7 @@ const spotifyAuthRoutes = require("./routes/auth"); // Correct import path for S
 const searchRoutes = require("./routes/search"); // Import search route
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 // Connect to MongoDB
 mongoose.set("strictQuery", false); // Prevent deprecation warnings
